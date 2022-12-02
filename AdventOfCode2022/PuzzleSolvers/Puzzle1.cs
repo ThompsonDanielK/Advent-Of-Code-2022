@@ -8,7 +8,7 @@ namespace AdventOfCode2022.PuzzleSolvers
 {
     public static class Puzzle1
     {
-        public static int Solve()
+        public static int Solve(List<string> puzzleInput)
         {
             return 0;
         }
