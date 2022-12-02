@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,26 +18,25 @@ namespace AdventOfCode2022.Utils
         /// <summary>
         /// Reads puzzle input from file
         /// </summary>
-        public static List<List<string>> ReadPuzzleInput()
+        public static List<string> ReadPuzzleInput()
         {
-            List<List<string>> input = new List<List<string>>();
+            List<string> puzzleInput = new List<string>();
             try
             {
-                using (StreamReader reader = new StreamReader(Path.Combine(filePath, "puzzleInput.csv")))
+                using (StreamReader reader = new StreamReader(Path.Combine(filePath, "puzzleInput.txt")))
                 {
                     while (!reader.EndOfStream)
                     {
                         string line = reader.ReadLine();
-                        // Do something
+                        puzzleInput.Add(line);
                     }
                 }
-                return input;
             }
             catch (IOException exc)
             {
                 Console.WriteLine("There was an error loading the puzzleInput file.");
-                return input;
             }
+            return puzzleInput;
         }
     }
 }
