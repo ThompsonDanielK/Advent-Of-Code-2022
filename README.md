@@ -1,2 +1,2 @@
 # Advent Of Code 2022
-Before you decide to run this hot piece of software, be sure to paste your input into puzzleInput.txt which is at the root of the directory. 
+Do you, like me, like to overcomplicate every piece of software you write? Yeah, you could just write a script in JS but where is the pizzaz in that that? Come on in and take a seat my friends. Let me show you the world of unnecessary UI. This application will contain logic to solve all the advent puzzles (once I'm finished). Before you decide to run this hot piece of software, be sure to paste your input into puzzleInput.txt which is at the root of the directory. 
