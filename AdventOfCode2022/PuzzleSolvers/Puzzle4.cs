@@ -88,10 +88,21 @@ namespace AdventOfCode2022.PuzzleSolvers
 
             set { }
         }
+        
+        private static string makeDraw(string opponentLetter)
+        {
+            return letterDrawPairs.FirstOrDefault(x => x.Value == opponentLetter).Key;
+        }
 
+        private static string makeLoss(string opponentLetter)
+        {
+            return letterLoseWinPairs.FirstOrDefault(x => x.Value == opponentLetter).Key;
+        }
 
-
-
+        private static string makeVictory(string opponentLetter)
+        {
+            return letterWinLosePairs.FirstOrDefault(x => x.Value == opponentLetter).Key;
+        }
 
         public static int Solve(List<string> puzzleInput)
         {
@@ -115,21 +126,6 @@ namespace AdventOfCode2022.PuzzleSolvers
 
             }
             return totalScore;
-        }
-
-        private static string makeDraw(string opponentLetter)
-        {
-            return letterDrawPairs.FirstOrDefault(x => x.Value == opponentLetter).Key;
-        }
-
-        private static string makeLoss(string opponentLetter)
-        {
-            return letterLoseWinPairs.FirstOrDefault(x => x.Value == opponentLetter).Key;
-        }
-
-        private static string makeVictory(string opponentLetter)
-        {
-            return letterWinLosePairs.FirstOrDefault(x => x.Value == opponentLetter).Key;
         }
     }
 }
