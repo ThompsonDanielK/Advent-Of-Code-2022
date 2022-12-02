@@ -14,7 +14,8 @@ namespace AdventOfCode2022.PuzzleSolvers
 
         public static readonly List<string> puzzleSolvers = new List<string>
         {
-            "Puzzle 1"
+            "Puzzle 1",
+            "Puzzle 2"
         };
 
         public static int? PuzzleSelector (int puzzleNumber)
@@ -23,6 +24,8 @@ namespace AdventOfCode2022.PuzzleSolvers
             {
                 case 1:
                     return Puzzle1.Solve(PuzzleInput);
+                case 2:
+                    return Puzzle2.Solve(PuzzleInput);
                     
                 default:
                     return null;                   
