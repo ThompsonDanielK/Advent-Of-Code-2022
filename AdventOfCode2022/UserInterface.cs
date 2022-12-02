@@ -48,7 +48,6 @@ namespace AdventOfCode2022
                     int? result = index.PuzzleSelector(puzzleNumber);
                     puzzleInputLoop = false;
                     Console.WriteLine($"The result is {result}");
-                    Console.ReadLine();
                 }
             }
 
