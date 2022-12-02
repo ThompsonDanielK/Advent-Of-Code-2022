@@ -38,7 +38,7 @@ namespace AdventOfCode2022
                 Console.WriteLine("Please input the number of the puzzle that you want to solve.");
 
                 string? userInput = Console.ReadLine();
-                int puzzleNumber = InputValidator.inputValidator(userInput);
+                int puzzleNumber = InputValidator.ParseStringToInt(userInput);
                 if (puzzleNumber > index.puzzleSolvers.Count || puzzleNumber < 1)
                 {
                     Console.WriteLine("Please input a valid puzzle number.");
@@ -48,6 +48,7 @@ namespace AdventOfCode2022
                     int? result = index.PuzzleSelector(puzzleNumber);
                     puzzleInputLoop = false;
                     Console.WriteLine($"The result is {result}");
+                    Console.ReadLine();
                 }
             }
 
