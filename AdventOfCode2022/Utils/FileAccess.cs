@@ -13,7 +13,7 @@ namespace AdventOfCode2022.Utils
     public static class FileAccess
     {
         // All external data files for this application should live in this directory.
-        private static string filePath = @"C:\AdventOfCode2022\";
+        private static string FilePath { get { return DirectoryInformation.TryGetSolutionDirectoryInfo().Parent.FullName; } set { } }
 
         /// <summary>
         /// Reads puzzle input from file
@@ -23,7 +23,7 @@ namespace AdventOfCode2022.Utils
             List<string> puzzleInput = new List<string>();
             try
             {
-                using (StreamReader reader = new StreamReader(Path.Combine(filePath, "puzzleInput.txt")))
+                using (StreamReader reader = new StreamReader(Path.Combine(FilePath, "puzzleInput.txt")))
                 {
                     while (!reader.EndOfStream)
                     {
