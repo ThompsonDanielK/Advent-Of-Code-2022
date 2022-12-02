@@ -8,7 +8,7 @@ namespace AdventOfCode2022.Utils
 {
     public static class InputValidator
     {
-        public static int inputValidator(string? input)
+        public static int ParseStringToInt(string? input)
         {
             int intInput = 0;
             bool result = int.TryParse(input, out intInput);
