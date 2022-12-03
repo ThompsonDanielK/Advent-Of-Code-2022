@@ -22,14 +22,14 @@ namespace AdventOfCode2022.PuzzleSolvers
                 foreach (char character in matchingChars)
                 {
                     int priority = 0;
-                    int unicode = character;
+                    int ASCII = character;
                     if (Char.IsUpper(character))
                     {
-                        priority += unicode - 38;
+                        priority += ASCII - 38;
                     }
                     else
                     {
-                        priority += unicode - 96;
+                        priority += ASCII - 96;
                     }
                     sumOfPrioties += priority;
                 }
