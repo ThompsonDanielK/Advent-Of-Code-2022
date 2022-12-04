@@ -19,7 +19,9 @@ namespace AdventOfCode2022.PuzzleSolvers
             "Puzzle 3",
             "Puzzle 4",
             "Puzzle 5",
-            "Puzzle 6"
+            "Puzzle 6",
+            "Puzzle 7",
+            "Puzzle 8"
         };
 
         public static int? PuzzleSelector (int puzzleNumber)
@@ -38,6 +40,11 @@ namespace AdventOfCode2022.PuzzleSolvers
                     return Puzzle5.Solve(PuzzleInput);
                 case 6:
                     return Puzzle6.Solve(PuzzleInput);
+                case 7:
+                    return Puzzle7.Solve(PuzzleInput);
+                case 8:
+                    return Puzzle8.Solve(PuzzleInput);
+
 
                 default:
                     return null;                   
