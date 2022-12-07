@@ -1,10 +1,4 @@
-﻿using AdventOfCode2022.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FileAccess = AdventOfCode2022.Utils.FileAccess;
+﻿using FileAccess = AdventOfCode2022.Utils.FileAccess;
 
 namespace AdventOfCode2022.PuzzleSolvers
 {
@@ -21,30 +15,35 @@ namespace AdventOfCode2022.PuzzleSolvers
             "Puzzle 5",
             "Puzzle 6",
             "Puzzle 7",
-            "Puzzle 8"
+            "Puzzle 8",
+            "Puzzle 9",
+            "Puzzle 10"
         };
 
-        public static int? PuzzleSelector (int puzzleNumber)
+        public static string PuzzleSelector (int puzzleNumber)
         {
             switch (puzzleNumber)
             {
                 case 1:
-                    return Puzzle1.Solve(PuzzleInput);
+                    return Puzzle1.Solve(PuzzleInput).ToString();
                 case 2:
-                    return Puzzle2.Solve(PuzzleInput);
+                    return Puzzle2.Solve(PuzzleInput).ToString();
                 case 3:
-                    return Puzzle3.Solve(PuzzleInput);
+                    return Puzzle3.Solve(PuzzleInput).ToString();
                 case 4:
-                    return Puzzle4.Solve(PuzzleInput);
+                    return Puzzle4.Solve(PuzzleInput).ToString();
                 case 5:
-                    return Puzzle5.Solve(PuzzleInput);
+                    return Puzzle5.Solve(PuzzleInput).ToString();
                 case 6:
-                    return Puzzle6.Solve(PuzzleInput);
+                    return Puzzle6.Solve(PuzzleInput).ToString();
                 case 7:
-                    return Puzzle7.Solve(PuzzleInput);
+                    return Puzzle7.Solve(PuzzleInput).ToString();
                 case 8:
-                    return Puzzle8.Solve(PuzzleInput);
-
+                    return Puzzle8.Solve(PuzzleInput).ToString();
+                case 9:
+                    return Puzzle9.Solve(PuzzleInput);
+                case 10:
+                    return Puzzle10.Solve(PuzzleInput);
 
                 default:
                     return null;                   
